@@ -8,14 +8,14 @@ $("#currentDate").append(date + "");
 //store search history in array
 var searchArray = JSON.parse(localStorage.getItem("cities")) || [];
  //append history
- showHistory();
- function showHistory() {
-     var searchArray = JSON.parse(localStorage.getItem("cities")) || [];
-     $("#search-history").empty();
-     for (var i = 0; i < searchArray.length; i++) {
-         document.getElementById("search-history").innerHTML += "<button>" + searchArray[i] + "</button>";
-     }
- }
+    showHistory();
+    function showHistory() {
+        var searchArray = JSON.parse(localStorage.getItem("cities")) || [];
+        $("#search-history").empty();
+        for (var i = 0; i < searchArray.length; i++) {
+            document.getElementById("search-history").innerHTML += "<button>" + searchArray[i] + "</button>";
+        }
+    }
 
 
 var m = moment();
