@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!--header navbar-->
+    <nav class="navbar navbar-expand-xl bg-dark text-light ">
+        <span class="mx-auto">
+            <h1>Weather Dashboard</h1>
+        </span>
+    </nav>
+    <!--content-column and grids-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card search-section">
+                    <div class="card-body">
+                        <h4>Search for a City:</h4>
+                        <form id="user-form" class="form-group mb-4 mt-2 input-group">
+                            <input name="search-input" id="search-input" type="text" class="form-input" placeholder="Enter a city name">
+                            <button id="weatherSearch" class="btn btn-success" type="submit">
+                                <span class="oi oi-magnifying-glass"></span>
+                            </button>
+                        </form>
+                        <div class="card" id="search-history">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="card mx-auto" style="width: 70rem;">
+                        <div class="card-body">
+                            <h4 id="searchedHistory">Today's Weather: <span id="cityName">  </span> <span id="currentDate"></span></h4>
+                            <ul>
+                                <li><span id="mainImg"></span></li>
+                                <li >Temperature: <span id="momentTemp"></span> </li>
+                                <li >Humidity: <span id="momentHumidity"></span> </li>
+                                <li>Wind Speed: <span  id="momentWindSpeed"></span> </li>
+                                <li >UV Index: <span class= "UV" id="UV-Index"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h4 class="subtitle">5-Day Forecast:</h4>
+                    <div class="row r2b justify-content-between">
+						<div class="col-md-2">
+							<div class="card" style="width: 10rem;">
+								<div class="card-body forecast" id="forecast">
+									<h4 id="dateOne"></h4>
+									<div id="iconOne"></div>
+									<div id="tempOne"></div>
+									<div id="humOne"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-2">
+							<div class="card" style="width: 10rem;">
+								<div class="card-body forecast" id="forecast">
+									<h4 id="dateTwo"></h4>
+									<div id="iconTwo"></div>
+									<div id="tempTwo"></div>
+									<div id="humTwo"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-2">
+							<div class="card" style="width: 10rem;">
+								<div class="card-body forecast" id="forecast">
+									<h4 id="dateThree"></h4>
+									<div id="iconThree"></div>
+									<div id="tempThree"></div>
+									<div id="humThree"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-2">
+							<div class="card" style="width: 10rem;">
+								<div class="card-body forecast" id="forecast">
+									<h4 id="dateFour"></h4>
+									<div id="iconFour"></div>
+									<div id="tempFour"></div>
+									<div id="humFour"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-2">
+							<div class="card" style="width: 10rem;">
+								<div class="card-body forecast" >
+									<h4 id="dateFive"></h4>
+									<div id="iconFive"></div>
+									<div id="tempFive"></div>
+									<div id="humFive"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src='./assets/script.js'></script>
+
+</body>
+
+
+
+
+</html>
